@@ -4,17 +4,20 @@ import Store from "./pages/Store";
 import About from "./pages/About";
 import Navbar from "./components/Navbar";
 import { Container } from "react-bootstrap";
+import { ShoppingCartProvider } from "./context/ShoppingCartContext";
 
 const App = () => (
   <>
-    <Navbar />
-    <Container>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/store" element={<Store />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </Container>
+    <ShoppingCartProvider>
+      <Navbar />
+      <Container>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/store" element={<Store />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Container>
+    </ShoppingCartProvider>
   </>
 );
 
