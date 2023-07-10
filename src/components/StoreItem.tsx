@@ -50,9 +50,7 @@ const StoreItem = ({ id, name, price, imgUrl }: StoreItemProps) => {
               <div
                 className="d-flex align-items-center justify-content-center"
                 style={{ gap: ".5rem" }}
-              >
-                Bye
-              </div>
+              ></div>
               <Button onClick={() => removeFromCart(id)} variant="danger">
                 Remove
               </Button>
